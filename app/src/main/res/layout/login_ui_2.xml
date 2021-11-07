@@ -10,17 +10,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
         android:text="LOGIN"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:layout_marginBottom="16dp"
         android:textStyle="bold" />
 
     <RelativeLayout
         android:id="@+id/form"
-        android:layout_below="@id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/title"
         android:background="@drawable/card_login_2_shape">
 
         <RelativeLayout
@@ -29,33 +29,97 @@
             android:padding="32dp">
 
             <TextView
+                android:id="@+id/email_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EMAIL/MOBILE"
-                android:textStyle="bold"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/email_input_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_title"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawablePadding="8dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/password_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_input_2"
+                android:layout_marginTop="24dp"
+                android:text="PASSWORD"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/password_input_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password_title"
+                android:drawableLeft="@drawable/ic_baseline_lock_open_24"
+                android:drawablePadding="8dp"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember Me!"
+                android:layout_below="@id/password_input_2"
+                android:layout_marginTop="24dp"
+                android:textSize="14dp" />
 
         </RelativeLayout>
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="430dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/arrow_button_background">
 
-    <RelativeLayout
-        android:layout_below="@id/form"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card_login_2_shape_2">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="32dp">
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="20dp">
+
 
             <TextView
+                android:id="@+id/do_not_have_an_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EMAIL/MOBILE"
-                android:textStyle="bold"
-                android:textSize="16sp"/>
+                android:layout_centerHorizontal="true"
+                android:text="Don't have an Account?"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+
+            <Button
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/do_not_have_an_account"
+                android:layout_marginHorizontal="32dp"
+                android:background="@drawable/arrow_button_background"
+                android:text="Sing up"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
         </RelativeLayout>
 
